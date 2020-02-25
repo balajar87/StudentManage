@@ -1,0 +1,66 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+  :host {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0px;
+      }
+
+      .mat-form-field {
+        width: 100%;
+        min-width: 300px;
+      }
+
+      mat-card-title,
+      mat-card-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .error {
+        padding: 16px;
+        width: 300px;
+        color: white;
+        background-color: red;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      
+  .blue
+  {
+color: blue;
+  }
+
+  .icon{
+    color: #2a2aad;
+  }
+
+  .middle
+  {
+    vertical-align: middle;
+  }
+
+  .size35{
+    font-size: 35px;
+  }
+
+  .mat-card:not([class*=mat-elevation-z])
+  {
+    box-shadow: 0 2px 11px 7px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  }

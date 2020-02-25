@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>
+    <mat-icon class="blue middle">lock</mat-icon>&nbsp;Login
+  </mat-card-title>
+  <mat-card-content>
+    <div class="example-container">
+      <form [formGroup]="loginForm" (keydown.enter)="onlogin()" action="#">
+        <div fxLayout="row" fxLayout.xs="row" >
+          <!-- <mat-icon matPrefix class="app-input-icon icon middle size35" fxFlex="10">person</mat-icon> -->
+          
+          <mat-form-field class="example-container" fxFlex="90">
+            <input matInput placeholder="Username" formControlName="userName" required>
+          </mat-form-field>
+        </div>
+        <mat-error *ngIf="hasError('userName', 'required') && loginForm.touched">Username is required</mat-error>
+        <mat-error *ngIf="hasError('userName', 'maxlength')">You have more than 20 characters</mat-error>
+        <div fxLayout="row" fxLayout.xs="row">
+          <!-- <mat-icon matPrefix class="app-input-icon icon middle size35" fxFlex="10">vpn_key</mat-icon> -->
+          
+          <mat-form-field class="example-container" fxFlex="90">
+            <input matInput type="password" placeholder="Password" formControlName="passWord" required>
+          </mat-form-field>
+        </div>
+        <mat-error *ngIf="hasError('passWord', 'required') && loginForm.touched">Password is required</mat-error>
+        <mat-error *ngIf="hasError('passWord', 'maxlength')">You have more than 20 characters</mat-error>
+      </form>
+      <div class="example-button-row button">
+        <button style="width: 100%;" class="" mat-raised-button color="primary" [disabled]="!loginForm.valid"
+          (click)="onlogin()">Login</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

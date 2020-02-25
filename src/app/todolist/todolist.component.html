@@ -1,0 +1,84 @@
+<div class=example-container>
+  <h2>
+    <mat-icon class="blue middle">assignment</mat-icon>&nbsp; Todos
+  </h2>
+  <mat-divider></mat-divider>
+
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <span class="mobile-label">ID :</span>
+        {{element.position}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="StudentID">
+      <mat-header-cell *matHeaderCellDef> Student ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Student ID <span class="spacer">:</span></span>
+        {{element.StudentID}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="StudentName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">StudentName :</span>
+        <span *ngIf="!element.isedit">{{element.StudentName}}</span>
+        <span *ngIf="element.isedit">
+          <mat-form-field>
+            <input matInput name="fieldname" [(ngModel)]="element.StudentName">
+          </mat-form-field>
+        </span>
+
+      </mat-cell> 
+    </ng-container>
+
+    <!-- Perentage Column -->
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Phone :</span>
+        <span *ngIf="!element.isedit">{{element.phone}}</span>
+        <span *ngIf="element.isedit">
+          <mat-form-field>
+            <input matInput name="phone" [(ngModel)]="element.phone">
+          </mat-form-field>
+        </span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Department Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Status :</span>
+        <!-- <span *ngIf="!element.isedit">{{element.status}}</span> *ngIf="element.isedit" -->
+        <mat-form-field floatLabel="never">
+          <mat-select [(ngModel)]="element.status" [disabled]="!element.isedit">
+            <mat-option *ngFor="let status of students" [value]="status.value">
+              {{status.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Action :</span>
+        <mat-icon class="pointer" *ngIf="!element.isedit">edit</mat-icon>
+        <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="add()">edit</mat-icon> -->
+        <mat-icon class="pointer" *ngIf="element.isedit" (click)="selectDisabled = true" (click)="save(element)">save
+        </mat-icon>
+        <mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon>
+        <mat-icon class="pointer" *ngIf="!element.isedit" (click)="delete(element)">delete</mat-icon>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
