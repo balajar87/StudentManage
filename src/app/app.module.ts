@@ -16,6 +16,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { TodolistComponent } from './todolist/todolist.component';
+import { RegisterComponent } from './Register/Register.component';
 
 @NgModule({
    schemas: [
@@ -29,7 +30,7 @@ import { TodolistComponent } from './todolist/todolist.component';
       //LoginComponent,
       LoginComponent,
       TodolistComponent,
-
+      RegisterComponent
    ],
    imports: [
       MatFormFieldModule,

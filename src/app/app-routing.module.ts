@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {DashboardComponent} from './Dashboard/Dashboard.component';
-import {StudentlistComponent} from './Studentlist/Studentlist.component';
+import { DashboardComponent } from './Dashboard/Dashboard.component';
+import { StudentlistComponent } from './Studentlist/Studentlist.component';
 import { LoginComponent } from './Login/Login.component';
-import {HomeComponent} from './Home/Home.component';
+import { HomeComponent } from './Home/Home.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import {RegisterComponent} from './Register/Register.component';
 
-const routes: Routes = [    
-  
-  {path:"Dashboard",component:DashboardComponent},
-  {path:"todolist",component:TodolistComponent},
-  {path:"Studentlist",component:StudentlistComponent},  
-  {path:"**",component:LoginComponent},
+const routes: Routes = [
+
+  { path: "Dashboard", component: DashboardComponent },
+  { path: "todolist", component: TodolistComponent },
+  { path: "Studentlist", component: StudentlistComponent },
+  { path: "Register", component: RegisterComponent },
+  { path: "**", component: LoginComponent },
 ];
 
 @NgModule({

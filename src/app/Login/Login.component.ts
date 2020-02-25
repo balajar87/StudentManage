@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
     if ((username != '' && passWord != '') && (username=="student" && passWord=="pass")) 
     {
-      this.router.navigate(["Dashboard"]);
+      this.router.navigate(["todolist"]);
       this.student.getstudent();
     }
     else {

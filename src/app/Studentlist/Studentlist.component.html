@@ -1,68 +1,83 @@
-<h2><mat-icon class="blue middle">account_circle</mat-icon>&nbsp; Student Details
+<h2>
+  <mat-icon class="blue middle">account_circle</mat-icon>&nbsp; Student Details
   <!-- <button class="right" mat-raised-button color="primary"  (click)="add()" >Add</button> -->
 </h2>
 <mat-divider></mat-divider>
 <br>
+<div>
 <mat-form-field>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
-<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  <!-- ID Column -->
-  <ng-container matColumnDef="position">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-    <mat-cell *matCellDef="let element"> <span class="mobile-label">ID:</span> 
-        {{element.position}}         
-    </mat-cell>
-  </ng-container>
+&nbsp;&nbsp;
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>  Name </mat-header-cell>
-    <mat-cell *matCellDef="let element"> <span class="mobile-label">Name:</span> 
-       <span *ngIf="!element.isedit">{{element.name}}</span> 
-       <span *ngIf="element.isedit">
-       <mat-form-field>
-        <input matInput name="name" [(ngModel)]="element.name">         
-      </mat-form-field>
-    </span> 
-      
-    </mat-cell>
-  </ng-container>
+<div class=example-container>
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <!-- ID Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> SNo </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">SNo:</span>
+        {{element.position}}
+      </mat-cell>
+    </ng-container>
+    
 
-  <!-- Perentage Column -->
-  <ng-container matColumnDef="weight">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Perentage </mat-header-cell>
-    <mat-cell *matCellDef="let element"> <span class="mobile-label">Weight:</span> 
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Name:</span>
+        <span *ngIf="!element.isedit">{{element.name}}</span>
+        <span *ngIf="element.isedit">
+          <mat-form-field>
+            <input matInput name="name" [(ngModel)]="element.name">
+          </mat-form-field>
+        </span>
+
+      </mat-cell>
+    </ng-container>
+
+    <!-- Perentage Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Perentage </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Weight:</span>
         <span *ngIf="!element.isedit">{{element.weight}}</span>
         <span *ngIf="element.isedit">
           <mat-form-field>
-            <input matInput name="weight" [(ngModel)]="element.weight">         
+            <input matInput name="weight" [(ngModel)]="element.weight">
           </mat-form-field>
-         </span> 
-         </mat-cell>
-  </ng-container>
+        </span>
+      </mat-cell>
+    </ng-container>
 
-  <!-- Department Column -->
-  <ng-container matColumnDef="symbol">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Department </mat-header-cell>
-    <mat-cell *matCellDef="let element"> <span class="mobile-label">Symbol:</span>
+    <!-- Department Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Department </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Symbol:</span>
         <span *ngIf="!element.isedit">{{element.symbol}}</span>
         <span *ngIf="element.isedit">
           <mat-form-field>
-            <input matInput name="symbol" [(ngModel)]="element.symbol">         
+            <input matInput name="symbol" [(ngModel)]="element.symbol">
           </mat-form-field>
-         </span> 
-     </mat-cell>
-  </ng-container>
-  
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="action">
-    <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
-    <mat-cell *matCellDef="let element" >  <span class="mobile-label">Action:</span>  
-      <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="edit(element)">edit</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="save(element)">save</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon><mat-icon class="pointer" *ngIf="!element.isedit" (click)="delete(element)">delete</mat-icon></mat-cell> -->
-      <mat-icon class="pointer" *ngIf="!element.isedit" (click)="edit(element)">edit</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="save(element)">save</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon><mat-icon class="pointer" *ngIf="!element.isedit">delete</mat-icon></mat-cell>
-  </ng-container>
-</mat-table>
-<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Action:</span>
+        <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="edit(element)">edit</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="save(element)">save</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon><mat-icon class="pointer" *ngIf="!element.isedit" (click)="delete(element)">delete</mat-icon></mat-cell> -->
+        <mat-icon class="pointer" *ngIf="!element.isedit" (click)="edit(element)">edit</mat-icon>
+        <mat-icon class="pointer" *ngIf="element.isedit" (click)="save(element)">save</mat-icon>
+        <mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon>
+        <mat-icon class="pointer" *ngIf="!element.isedit">delete</mat-icon>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
