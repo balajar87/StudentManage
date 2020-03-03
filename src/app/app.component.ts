@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { MatDialogModule } from '@angular/material'
+import { MatDialogModule } from '@angular/material/dialog';
 import { StudentService } from './student.service';
 
 

@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild,NgModule } from '@angular/core';
-import { MatTableDataSource,MatSnackBar, MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatTableDataSource } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 
 export interface PeriodicElement {
