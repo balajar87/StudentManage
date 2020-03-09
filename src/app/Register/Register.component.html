@@ -43,9 +43,32 @@
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
+                    &nbsp;&nbsp;
                     <mat-form-field class="half-width">
                         <mat-label>WhatsApp Number</mat-label>
                         <input matInput placeholder="WhatsApp Number" name="wnumber" required>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+                    <mat-form-field class="half-width">
+                        <mat-label>Course</mat-label>
+                        <mat-select>                    
+                            <mat-option value="NID">NID</mat-option>
+                            <mat-option value="NID/CEED">NID/CEED</mat-option>
+                            <mat-option value="NIFT">NIFT</mat-option>
+                            <mat-option value="NID/NIFT">NID/NIFT</mat-option>
+                            <mat-option value="FOUNDATION">FOUNDATION</mat-option>
+                          </mat-select>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+                    <mat-form-field class="half-width">
+                        <mat-label>Duration</mat-label>
+                        <mat-select>                                            
+                            <mat-option value="3Y">3 Year Long Program</mat-option>
+                            <mat-option value="2Y">2 Year long Program</mat-option>
+                            <mat-option value="1Y">1 Year Weekend Batch</mat-option>
+                            <mat-option value="CC">Crash Course</mat-option>
+                            <mat-option value="4M">4 Month Weekend Batch</mat-option>
+                          </mat-select>
                     </mat-form-field>
                     <!-- School/College Information -->
                     <!-- <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -84,21 +107,62 @@
                                 </mat-panel-description>
                             </mat-expansion-panel-header>
                             <mat-form-field>
-                                <mat-label>School/College Name </mat-label>
-                                <input matInput placeholder="School/College Name" required>
+                                <mat-label>School Name </mat-label>
+                                <input matInput placeholder="School Name" required>
                             </mat-form-field>
+                            &nbsp;&nbsp;                            
+                            <mat-form-field>
+                                <mat-label>Standard</mat-label>
+                                <mat-select>
+                                  <mat-option value="primary">IX Standard</mat-option>
+                                  <mat-option value="accent">X Standard</mat-option>
+                                  <mat-option value="warn">XI Standard</mat-option>
+                                  <mat-option value="warn">XII Standard</mat-option>
+                                </mat-select>
+                              </mat-form-field>
                             &nbsp;&nbsp;
                             <mat-form-field>
-                                <mat-label>Department</mat-label>
-                                <input matInput placeholder="Department" required>
-                            </mat-form-field>
+                                <mat-label>Group</mat-label>
+                                <mat-select>
+                                  <mat-option value="primary">PCMB</mat-option>
+                                  <mat-option value="accent">PCMC</mat-option>
+                                  <mat-option value="warn">ACEC</mat-option>
+                                  <mat-option value="warn">ACEB</mat-option>
+                                </mat-select>
+                              </mat-form-field>
                             &nbsp;&nbsp;
                             <mat-form-field>
                                 <mat-label>Year</mat-label>
                                 <input matInput placeholder="Year" required>
                             </mat-form-field>
-                            
                             <br>
+                            <mat-form-field>
+                                <mat-label>College Name </mat-label>
+                                <input matInput placeholder="College Name" required>
+                            </mat-form-field>
+                            &nbsp;&nbsp;                            
+                            <mat-form-field>
+                                <mat-label>Degree</mat-label>
+                                <mat-select>
+                                  <mat-option value="Bachelor">B.sc</mat-option>
+                                  <mat-option value="Engineering">B.E</mat-option>
+                                  <mat-option value="Masters">M.sc</mat-option>
+                                  <mat-option value="Other">Other</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                            &nbsp;&nbsp;
+                            <mat-form-field>
+                                <mat-label>Department</mat-label>
+                                <input matInput placeholder="Department" required>
+                              </mat-form-field>
+                            &nbsp;&nbsp;
+                            <mat-form-field>
+                                <mat-label>Year</mat-label>
+                                <input matInput placeholder="Year" required>
+                            </mat-form-field>
+                            <br>
+
+
                             <mat-form-field>
                                 <mat-label>Father name</mat-label>
                                 <input matInput placeholder="Father Name" required>
@@ -154,6 +218,8 @@
                                 <input matInput placeholder="Mother Annual Income">
                             </mat-form-field>
                         </mat-expansion-panel>
+
+
                                             
                     </mat-accordion>
                 </form>
