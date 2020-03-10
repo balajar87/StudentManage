@@ -1,0 +1,14 @@
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.deps.json
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.runtimeconfig.json
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.runtimeconfig.dev.json
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.dll
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.pdb
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.csprojAssemblyReference.cache
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.csproj.CoreCompileInputs.cache
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.RazorAssemblyInfo.cache
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.RazorAssemblyInfo.cs
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.AssemblyInfoInputs.cache
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.AssemblyInfo.cs
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.RazorTargetAssemblyInfo.cache
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.dll
+D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.pdb
