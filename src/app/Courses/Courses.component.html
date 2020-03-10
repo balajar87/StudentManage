@@ -1,1 +1,80 @@
 
+<h2>
+  <mat-icon class="blue middle">account_circle</mat-icon>&nbsp; Course Details
+  <!-- <button class="right" mat-raised-button color="primary"  (click)="add()" >Add</button> -->
+</h2>
+<mat-divider></mat-divider>
+<br>
+<div>
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+</div>
+
+<div class=example-container>
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <!-- ID Column -->
+    <ng-container matColumnDef="CourseID">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> CourseID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">CourseID:</span>
+        {{element.CourseID}}
+      </mat-cell>
+    </ng-container>
+    
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="CourseName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> CourseName </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">CourseName:</span>
+        <span *ngIf="!element.isedit">{{element.CourseName}}</span>
+        <span *ngIf="element.isedit">
+          <mat-form-field>
+            <input matInput name="name" [(ngModel)]="element.CourseName">
+          </mat-form-field>
+        </span>
+
+      </mat-cell>
+    </ng-container>
+
+    <!-- Perentage Column -->
+    <ng-container matColumnDef="Cost">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Cost </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Cost:</span>
+        <span *ngIf="!element.isedit">{{element.Cost}}</span>
+        <span *ngIf="element.isedit">
+          <mat-form-field>
+            <input matInput name="Cost" [(ngModel)]="element.Cost">
+          </mat-form-field>
+        </span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Department Column -->
+    <ng-container matColumnDef="Duration">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Department </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Duration:</span>
+        <span *ngIf="!element.isedit">{{element.Duration}}</span>
+        <span *ngIf="element.isedit">
+          <mat-form-field>
+            <input matInput name="Duration" [(ngModel)]="element.Duration">
+          </mat-form-field>
+        </span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <span class="mobile-label">Action:</span>
+        <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="edit(element)">edit</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="save(element)">save</mat-icon><mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon><mat-icon class="pointer" *ngIf="!element.isedit" (click)="delete(element)">delete</mat-icon></mat-cell> -->
+        <mat-icon class="pointer" *ngIf="!element.isedit" (click)="edit(element)">edit</mat-icon>
+        <mat-icon class="pointer" *ngIf="element.isedit" (click)="save(element)">save</mat-icon>
+        <mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon>
+        <mat-icon class="pointer" *ngIf="!element.isedit">delete</mat-icon>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

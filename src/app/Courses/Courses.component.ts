@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,NgModule } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
 
 
 export interface PeriodicElement {  
@@ -22,9 +26,48 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns: string[] = ['CourseID', 'CourseName', 'Duration', 'Cost', 'action'];
+  //dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+
+  constructor(private _snackBar: MatSnackBar) { }
+
 
   ngOnInit() {
+  }
+  applyFilter(filterValue: string) {
+    //debugger;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  edit(model: PeriodicElement) {
+    if (model.isedit)
+      model.isedit = false;
+    else
+      model.isedit = true;
+  }
+  save(model: PeriodicElement) {
+    if (model.isedit)
+      model.isedit = false;
+    else
+      model.isedit = true;
+
+      this.openSnackBar("Records Saved", "Ok");
+  }
+
+  cancel(model: PeriodicElement) {
+    if (model.isedit)
+      model.isedit = false;
+    else
+      model.isedit = true;
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
   }
 
 }

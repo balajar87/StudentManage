@@ -1,0 +1,53 @@
+  
+  .mat-table {
+    overflow: auto;
+    max-height: auto;
+    width:  100%;
+    
+  }
+  
+  .blue
+  {
+color: blue;
+  }
+
+  .middle
+  {
+    vertical-align: middle;
+  }
+
+  
+  .pointer{
+    cursor: pointer;
+  }
+
+  .right
+  {
+    float: right;
+  }
+
+.mobile-label {
+    display: none;
+  }
+
+@media(max-width: 600px) {
+    .mobile-label {
+      width: 80px;
+      display: inline-block;
+          font-weight: bold;
+    }
+  
+    .mat-header-row {
+      display: none;
+    }
+  
+    .mat-row { 
+      flex-direction: column;
+      align-items: start;
+      padding: 8px 24px;
+    }
+  }
+
+  .mat-sort-header-sorted {
+    color: black;
+  }
