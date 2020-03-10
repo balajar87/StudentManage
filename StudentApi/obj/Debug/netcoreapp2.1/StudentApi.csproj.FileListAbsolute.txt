@@ -1,3 +1,17 @@
+D:\Angular_React\Angular\StudentPortal\studentapi\bin\Debug\netcoreapp2.1\studentapi.deps.json
+D:\Angular_React\Angular\StudentPortal\studentapi\bin\Debug\netcoreapp2.1\studentapi.runtimeconfig.json
+D:\Angular_React\Angular\StudentPortal\studentapi\bin\Debug\netcoreapp2.1\studentapi.runtimeconfig.dev.json
+D:\Angular_React\Angular\StudentPortal\studentapi\bin\Debug\netcoreapp2.1\studentapi.dll
+D:\Angular_React\Angular\StudentPortal\studentapi\bin\Debug\netcoreapp2.1\studentapi.pdb
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.csprojAssemblyReference.cache
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.csproj.CoreCompileInputs.cache
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.RazorAssemblyInfo.cache
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.RazorAssemblyInfo.cs
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.AssemblyInfoInputs.cache
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.AssemblyInfo.cs
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.RazorTargetAssemblyInfo.cache
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.dll
+D:\Angular_React\Angular\StudentPortal\studentapi\obj\Debug\netcoreapp2.1\studentapi.pdb
 D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.deps.json
 D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.runtimeconfig.json
 D:\Angular_React\Angular\StudentManagement\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\StudentApi.runtimeconfig.dev.json
