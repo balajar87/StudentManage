@@ -47,6 +47,10 @@
           <mat-icon>school</mat-icon> 
           <label class="space">Courses Offers</label>
         </a>
+        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/Accounts'">
+          <mat-icon>account_balance_wallet</mat-icon> 
+          <label class="space">Student Accounts</label>
+        </a>
         <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/about'">
           <mat-icon>info</mat-icon> 
           <label class="space">About</label>
@@ -55,7 +59,7 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content >
-      <div style="height: 75vh;" class="basic-container">
+      <div style="height: 75vh;" class="basic-container image" >
 
         <router-outlet></router-outlet>
 

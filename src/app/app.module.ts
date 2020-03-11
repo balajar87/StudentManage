@@ -33,6 +33,7 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { RegisterComponent } from './Register/Register.component';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoursesComponent } from './Courses/Courses.component';
+import { AccountsComponent } from './Accounts/Accounts.component';
 
 @NgModule({
    schemas: [
@@ -47,7 +48,8 @@ import { CoursesComponent } from './Courses/Courses.component';
       LoginComponent,
       TodolistComponent,
       RegisterComponent,
-      CoursesComponent
+      CoursesComponent,
+      AccountsComponent
    ],
    imports: [
       MatExpansionModule,

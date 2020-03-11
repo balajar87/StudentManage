@@ -31,6 +31,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './Studentlist.component.html',
   styleUrls: ['./Studentlist.component.css']
 })
+
+
 export class StudentlistComponent implements OnInit {
 
   animal: string;

@@ -6,6 +6,22 @@
   }
 
   .mat-toolbar.mat-primary {
-    background:#ef2121;
+    background:#c62324;
         color: #fff;
+}
+
+.image{
+  height:40em; 
+  background-size:cover;
+  width:auto;
+  background-image:url('../assets/bg1.png');
+  background-position:100%;
+}
+
+footer{
+  background: transparent;
+}
+
+.mat-divider {
+  border-top-color: #00000054;
 }

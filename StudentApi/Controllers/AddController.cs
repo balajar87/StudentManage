@@ -23,13 +23,7 @@ namespace studentapi.Controllers
         var values = _context.Users.ToList();
         return Ok(values);  
         }
-
-        [HttpGet]
-        public IActionResult Get()
-        {
-        var values = _context.Users.ToList();
-        return Ok(values);  
-        }
+        
 
     }
 }
