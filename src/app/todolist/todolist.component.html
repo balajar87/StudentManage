@@ -1,7 +1,4 @@
 <div class=example-container>
-  <h2>
-    <mat-icon class="blue middle">assignment</mat-icon>&nbsp; Lead Management
-  </h2>
   <mat-divider></mat-divider>
 
   <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -32,12 +29,12 @@
           </mat-form-field>
         </span>
 
-      </mat-cell> 
+      </mat-cell>
     </ng-container>
 
     <!-- Perentage Column -->
     <ng-container matColumnDef="phone">
-      <mat-header-cell *matHeaderCellDef> Contact  </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Contact </mat-header-cell>
       <mat-cell *matCellDef="let element"> <span class="mobile-label">Contact :</span>
         <span *ngIf="!element.isedit">{{element.phone}}</span>
         <span *ngIf="element.isedit">
@@ -49,7 +46,7 @@
     </ng-container>
 
     <ng-container matColumnDef="ParentNumber">
-      <mat-header-cell *matHeaderCellDef> Parent Number  </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Parent Number </mat-header-cell>
       <mat-cell *matCellDef="let element"> <span class="mobile-label">Parent Number :</span>
         <span *ngIf="!element.isedit">{{element.ParentNumber}}</span>
         <span *ngIf="element.isedit">
@@ -60,7 +57,7 @@
       </mat-cell>
     </ng-container>
     <ng-container matColumnDef="WhatsppNumber">
-      <mat-header-cell *matHeaderCellDef> Whatsapp Number  </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Whatsapp Number </mat-header-cell>
       <mat-cell *matCellDef="let element"> <span class="mobile-label">Whatsapp Number :</span>
         <span *ngIf="!element.isedit">{{element.WhatsppNumber}}</span>
         <span *ngIf="element.isedit">
@@ -95,7 +92,7 @@
         <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="add()">edit</mat-icon> -->
         <!-- <mat-icon class="pointer" *ngIf="element.isedit" (click)="selectDisabled = true" (click)="save(element)">save
         </mat-icon> -->
-        
+
         <mat-icon class="pointer" *ngIf="element.isedit" (click)="cancel(element)">cancel</mat-icon>
         <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="delete(element)">delete</mat-icon> -->
       </mat-cell>

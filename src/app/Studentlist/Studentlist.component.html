@@ -1,13 +1,7 @@
-<h2>
-  <mat-icon class="blue middle">account_circle</mat-icon>&nbsp; Student Details
-  <!-- <button class="right" mat-raised-button color="primary"  (click)="add()" >Add</button> -->
-</h2>
-<mat-divider></mat-divider>
-<br>
-<div>
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px" fxLayoutAlign="start center">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
 </div>
 
 <div class=example-container>
@@ -21,7 +15,7 @@
         {{element.position}}
       </mat-cell>
     </ng-container>
-    
+
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">

@@ -5,19 +5,19 @@
   <mat-card-content>
     <div class="example-container">
       <form [formGroup]="loginForm" (keydown.enter)="onlogin()" action="#">
-        <div fxLayout="row" fxLayout.xs="row" >
-          <!-- <mat-icon matPrefix class="app-input-icon icon middle size35" fxFlex="10">person</mat-icon> -->
-          
-          <mat-form-field class="example-container" fxFlex="50">
+        <div fxLayout="row" fxLayout.xs="row">
+          <mat-icon matPrefix class="app-input-icon icon middle size35" fxFlex="20">person</mat-icon>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-form-field class="example-container" fxFlex="80">
             <input matInput placeholder="Username" formControlName="userName" required>
           </mat-form-field>
         </div>
         <mat-error *ngIf="hasError('userName', 'required') && loginForm.touched">Username is required</mat-error>
         <mat-error *ngIf="hasError('userName', 'maxlength')">You have more than 20 characters</mat-error>
         <div fxLayout="row" fxLayout.xs="row">
-          <!-- <mat-icon matPrefix class="app-input-icon icon middle size35" fxFlex="10">vpn_key</mat-icon> -->
-          
-          <mat-form-field class="example-container" fxFlex="50">
+          <mat-icon matPrefix class="app-input-icon icon middle size35" fxFlex="20">vpn_key</mat-icon>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-form-field class="example-container" fxFlex="80">
             <input matInput type="password" placeholder="Password" formControlName="passWord" required>
           </mat-form-field>
         </div>

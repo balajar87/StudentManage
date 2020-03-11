@@ -6,7 +6,12 @@
 //@import '@angular/material/prebuilt-themes/purple-green.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;overflow-y: hidden; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;overflow-y: hidden;background: black; }
+
+footer{
+  color:white;
+  background:black;
+}
 
 .space{
     padding: 0 20px;
