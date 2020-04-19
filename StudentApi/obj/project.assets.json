@@ -11804,11 +11804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Angular_React\\Angular\\StudentManagement\\StudentManage\\StudentApi\\StudentApi.csproj",
+      "projectUniqueName": "d:\\Bala\\Angular\\StudentManage\\StudentManage\\StudentApi\\StudentApi.csproj",
       "projectName": "StudentApi",
-      "projectPath": "D:\\Angular_React\\Angular\\StudentManagement\\StudentManage\\StudentApi\\StudentApi.csproj",
+      "projectPath": "d:\\Bala\\Angular\\StudentManage\\StudentManage\\StudentApi\\StudentApi.csproj",
       "packagesPath": "C:\\Users\\braju\\.nuget\\packages\\",
-      "outputPath": "D:\\Angular_React\\Angular\\StudentManagement\\StudentManage\\StudentApi\\obj\\",
+      "outputPath": "d:\\Bala\\Angular\\StudentManage\\StudentManage\\StudentApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
