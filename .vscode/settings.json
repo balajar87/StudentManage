@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1c2ed097-1232-4c34-b1e9-843dfc7a55aa/resourceGroups/BalaAzureTest/providers/Microsoft.Web/sites/stmanagedev",
+    "appService.deploySubpath": "StudentApi\\publish"
+}

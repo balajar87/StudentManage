@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using studentapi.Data;
+using Newtonsoft.Json;
 
 namespace studentapi.Controllers
 {
@@ -29,6 +30,6 @@ namespace studentapi.Controllers
         var values = _context.Users.Where(s=>s.Id==id).ToList();
         return Ok(values);      
         }
-
+        
     }
 }
