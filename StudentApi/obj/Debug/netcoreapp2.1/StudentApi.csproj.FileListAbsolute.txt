@@ -44,3 +44,8 @@ D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\a
 D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\appsettings.json
 D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 D:\Bala\Angular\StudentManage\StudentManage\StudentApi\obj\Debug\netcoreapp2.1\StudentApi.genruntimeconfig.cache
+D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\publish\appsettings.Development.json
+D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\publish\appsettings.json
+D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\publish\web.config
+D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\publish\StudentApi.deps.json
+D:\Bala\Angular\StudentManage\StudentManage\StudentApi\bin\Debug\netcoreapp2.1\publish\StudentApi.runtimeconfig.json
