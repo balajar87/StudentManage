@@ -12,13 +12,19 @@ namespace StudentApi.Controllers
     
     public class LoginController: ControllerBase
     {
-        private readonly DataContext _context;
-
-        [HttpGet("{username},{password}")]
-        public IActionResult Valid(string username,string password)
+        private readonly DataContext _context;        
+ 
+        public LoginController(DataContext context)
         {
-            var values=_context.Users.Where(s=>s.UserName==username && s.Password==password).Count();
-            return Ok(values);
+        _context = context;
+        }
+
+        [Route("{username}/{password}")]
+        public string GetQuery(string username,string password)
+        {
+            int getcount = _context.Users.Where(s=>s.UserName==username).Count();            
+            bool uservalid=getcount>1?true:false;
+            return uservalid.ToString();
         }
         
     }
