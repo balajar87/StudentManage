@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface Transaction {
   item: string;
@@ -26,11 +27,21 @@ export class AccountsComponent implements OnInit {
     return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
   }
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
+  save()
+  {
+    this.openSnackBar("Records Saved", "Ok")
+  }
+    
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
 }
 
 

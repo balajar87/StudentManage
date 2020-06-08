@@ -34,6 +34,7 @@ import { RegisterComponent } from './Register/Register.component';
  import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoursesComponent } from './Courses/Courses.component';
 import { AccountsComponent } from './Accounts/Accounts.component';
+import { FollowupComponent } from './followup/followup.component';
 
 @NgModule({
    schemas: [
@@ -50,7 +51,8 @@ import { AccountsComponent } from './Accounts/Accounts.component';
       RegisterComponent,
       CoursesComponent,
       AccountsComponent,
-      AccountsComponent
+      AccountsComponent,
+      FollowupComponent
    ],
    imports: [
       FlexLayoutModule,

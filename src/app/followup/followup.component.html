@@ -1,0 +1,43 @@
+
+<h1 mat-dialog-title><mat-icon class="blue middle">assignment</mat-icon>&nbsp;Todos Followup</h1>
+<div mat-dialog-content style="overflow: hidden !important;">
+    
+    <mat-form-field floatLabel="never">
+       <mat-select [(value)]="selected">
+            <mat-option *ngFor="let status of students" [value]="status.value">
+              {{status.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker1" placeholder="Followup Date" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 ></mat-datepicker>
+          </mat-form-field>&nbsp;&nbsp;
+  <mat-form-field style="width: 40%;">
+    <textarea matInput placeholder="Leave a comment" style="resize: none;"></textarea>
+  </mat-form-field>
+ 
+</div>
+
+<br>
+<br>
+<div fxLayout="row" fxLayout.xs="row">
+<mat-form-field  fxFlex="40">
+  <textarea matInput placeholder="Content to Share" style="resize: none;"></textarea>
+</mat-form-field>
+<h3 fxFlex="30"><a href="https://web.whatsapp.com/send?text=welcome" style="text-decoration: none;color: black;"  target="_blank"  data-text="Take a look at this awesome website:" class="wa_btn wa_btn_s right" >Share on Whatsapp</a> <mat-icon class="blue middle right">share</mat-icon></h3>
+
+</div>
+<h1 mat-dialog-title><mat-icon class="blue middle">history</mat-icon>&nbsp;Previous Followup</h1>
+<mat-list>
+  <mat-list-item>2/13/2020 - Another Time : Interested to join, But the student said to call another time. </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>2/12/2020 - Called : No answer from the student.</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>2/11/2020 - Not Called</mat-list-item>
+</mat-list>
+<mat-dialog-actions align="end">  
+    <button mat-raised-button color="primary" (click)="save()" [mat-dialog-close]="" cdkFocusInitial>Save</button>
+    <button mat-raised-button (click)="onNoClick()">Close</button>
+  </mat-dialog-actions>

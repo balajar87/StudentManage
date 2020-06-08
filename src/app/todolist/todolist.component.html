@@ -88,8 +88,7 @@
       <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
       <mat-cell *matCellDef="let element"> <span class="mobile-label">Action :</span>
         <div>&nbsp;</div>
-        <mat-icon class="pointer" *ngIf="!element.isedit">edit</mat-icon>
-        <!-- <mat-icon class="pointer" *ngIf="!element.isedit" (click)="add()">edit</mat-icon> -->
+        <mat-icon class="pointer"  *ngIf="!element.isedit" (click)="add()">edit</mat-icon>        
         <!-- <mat-icon class="pointer" *ngIf="element.isedit" (click)="selectDisabled = true" (click)="save(element)">save
         </mat-icon> -->
 

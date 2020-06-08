@@ -221,8 +221,9 @@
             </mat-card-content>
         </form>
 
+        <mat-card-actions align="end">
+            <button style="height: 40px;" mat-raised-button color="primary" (click)="save()" [mat-dialog-close]="" cdkFocusInitial>Save</button>        
+        </mat-card-actions>  
     </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="save()" [mat-dialog-close]="" cdkFocusInitial>Save</button>
-    </mat-card-actions>
+                  
 </mat-card>

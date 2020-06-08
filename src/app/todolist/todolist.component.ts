@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
+import { FollowupComponent } from '../followup/followup.component';
 
 export interface PeriodicElement {
   StudentName: string;
@@ -71,6 +72,17 @@ export class TodolistComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  add(){
+    const dialogRef = this.dialog.open(FollowupComponent, {
+      width: '800px',
+      //data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      //console.log('The dialog was closed');
+      //this.animal = result;
+    });
+  }
   
     
   edit(model: PeriodicElement) {
