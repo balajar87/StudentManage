@@ -31,63 +31,64 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { TodolistComponent } from './todolist/todolist.component';
 import { RegisterComponent } from './Register/Register.component';
- import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoursesComponent } from './Courses/Courses.component';
 import { AccountsComponent } from './Accounts/Accounts.component';
 import { FollowupComponent } from './followup/followup.component';
+import { ApiService } from './core/http/api.service';
 
 @NgModule({
-   schemas: [
-      CUSTOM_ELEMENTS_SCHEMA
-   ],
-   declarations: [
-      AppComponent,
-      HomeComponent,
-      DashboardComponent,
-      StudentlistComponent,
-      //LoginComponent,
-      LoginComponent,
-      TodolistComponent,
-      RegisterComponent,
-      CoursesComponent,
-      AccountsComponent,
-      AccountsComponent,
-      FollowupComponent
-   ],
-   imports: [
-      FlexLayoutModule,
-      MatExpansionModule,
-      MatNativeDateModule,
-      MatDatepickerModule,
-      MatFormFieldModule,
-      MatMenuModule,
-      MatDialogModule,
-      BrowserModule,
-      ReactiveFormsModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      HttpClientModule,
-      MatToolbarModule,
-      MatIconModule,
-      MatSidenavModule,
-      MatListModule,
-      MatButtonModule,
-      MatCardModule,
-      MatInputModule,
-      MatButtonModule,
-      MatCardModule,
-      MatTableModule,
-      MatIconModule,
-      MatSnackBarModule,
-      MatPaginatorModule,
-      MatSelectModule,
-      MatSortModule,
-      MatListModule,
-      FormsModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    DashboardComponent,
+    StudentlistComponent,
+    //LoginComponent,
+    LoginComponent,
+    TodolistComponent,
+    RegisterComponent,
+    CoursesComponent,
+    AccountsComponent,
+    AccountsComponent,
+    FollowupComponent
+  ],
+  imports: [
+    FlexLayoutModule,
+    MatExpansionModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatDialogModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTableModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatSortModule,
+    MatListModule,
+    FormsModule
+  ],
+  providers: [ApiService],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
