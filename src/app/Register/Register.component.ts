@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {StudentService} from '../student.service'
+import { StudentService } from '../student.service'
+import { User } from './Model/user';
 
 @Component({
   selector: 'app-Register',
@@ -15,11 +16,12 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   loading = false;
   submitted = false;
+  userData: User;
   constructor(
     private formBuilder: FormBuilder,
-        private router: Router,
-        private _snackBar: MatSnackBar,
-        private student: StudentService
+    private router: Router,
+    private _snackBar: MatSnackBar,
+    private student: StudentService
   ) { }
 
   ngOnInit() {
@@ -46,37 +48,45 @@ export class RegisterComponent implements OnInit {
 
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
-  });
+    });
   }
 
   get f() { return this.registerForm.controls; }
 
-  save()
-  {
-
-    var user = {    
-    UserName: this.registerForm.controls["UserName"].value,
-    FirstName: this.registerForm.controls["FirstName"].value,
-    LastName: this.registerForm.controls["LastName"].value,
-    Phone: this.registerForm.controls["Phone"].value,
-    Email: this.registerForm.controls["Email"].value,
-    DOB: this.registerForm.controls["DOB"].value,
-    CourseId: this.registerForm.controls["CourseId"].value,
-    FatherOccupation: this.registerForm.controls["FatherOccupation"].value,
-    FatherName: this.registerForm.controls["FatherName"].value,
-    FPhone: this.registerForm.controls["FPhone"].value,
-    FatherOrg: this.registerForm.controls["FatherOrg"].value,
-    FAnnualIncome: this.registerForm.controls["FAnnualIncome"].value,
-    MotherName: this.registerForm.controls["MotherName"].value,
-    //MPhone: this.registerForm.controls["MPhone"].value,
-    MotherOccupation: this.registerForm.controls["MotherOccupation"].value,
-    MotherOrg: this.registerForm.controls["MotherOrg"].value,
-    MAnnualIncome: this.registerForm.controls["MAnnualIncome"].value,
-
+  save() {
+    if (!this.registerForm.invalid) {
+      return;
     }
-    debugger;   
-    this.student.addUser(JSON.stringify(user)).subscribe(
-      ()=>{this.openSnackBar("Records Saved", "Ok")}
+
+    this.userData = this.registerForm.value;
+
+    console.log(this.userData)
+
+    // var user = {    
+    // UserName: this.registerForm.controls["UserName"].value,
+    // FirstName: this.registerForm.controls["FirstName"].value,
+    // LastName: this.registerForm.controls["LastName"].value,
+    // Phone: this.registerForm.controls["Phone"].value,
+    // Email: this.registerForm.controls["Email"].value,
+    // DOB: this.registerForm.controls["DOB"].value,
+    // CourseId: this.registerForm.controls["CourseId"].value,
+    // FatherOccupation: this.registerForm.controls["FatherOccupation"].value,
+    // FatherName: this.registerForm.controls["FatherName"].value,
+    // FPhone: this.registerForm.controls["FPhone"].value,
+    // FatherOrg: this.registerForm.controls["FatherOrg"].value,
+    // FAnnualIncome: this.registerForm.controls["FAnnualIncome"].value,
+    // MotherName: this.registerForm.controls["MotherName"].value,
+    // //MPhone: this.registerForm.controls["MPhone"].value,
+    // MotherOccupation: this.registerForm.controls["MotherOccupation"].value,
+    // MotherOrg: this.registerForm.controls["MotherOrg"].value,
+    // MAnnualIncome: this.registerForm.controls["MAnnualIncome"].value,
+
+    // }
+
+
+    debugger;
+    this.student.addUser(JSON.stringify(this.userData)).subscribe(
+      () => { this.openSnackBar("Records Saved", "Ok") }
     );
   }
 
@@ -93,7 +103,7 @@ export class RegisterComponent implements OnInit {
 
     // stop here if form is invalid
     if (this.registerForm.invalid) {
-        return;
+      return;
     }
   }
 

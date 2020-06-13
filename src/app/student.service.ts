@@ -18,7 +18,7 @@
 
     addUser(UserModel) : Observable<any> {    
       //console.log(UserModel);
-      return this.http.post<any>(this.apiURL+'/Student', UserModel, this.httpOptions);
+      return this.http.post<any>(this.apiURL+'/Student',UserModel, this.httpOptions);
     }
 
   constructor(private http: HttpClient) { 
