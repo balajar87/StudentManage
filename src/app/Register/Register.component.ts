@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
     FatherOrg: this.registerForm.controls["FatherOrg"].value,
     FAnnualIncome: this.registerForm.controls["FAnnualIncome"].value,
     MotherName: this.registerForm.controls["MotherName"].value,
-    MPhone: this.registerForm.controls["MPhone"].value,
+    //MPhone: this.registerForm.controls["MPhone"].value,
     MotherOccupation: this.registerForm.controls["MotherOccupation"].value,
     MotherOrg: this.registerForm.controls["MotherOrg"].value,
     MAnnualIncome: this.registerForm.controls["MAnnualIncome"].value,

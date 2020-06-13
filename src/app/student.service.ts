@@ -6,7 +6,7 @@
     providedIn: 'root'
   })
   export class StudentService {
-    apiURL = "";
+    apiURL = "https://stmanagedev.azurewebsites.net/api";
     httpOptions : {};
     private readonly loggedIn: Subject<boolean> = new Subject();
     public loggedIn$: Observable<boolean> = this.loggedIn.asObservable();
