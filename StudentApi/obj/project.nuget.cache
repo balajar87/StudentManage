@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gEwJvS6rvW0lzFDoyNzJCeHoGLuUdlXvLa7R8YpPnfIYLAh+GqfrW8FGs/+e+PDyl8Jk1j56/rAJvCel1gc+lg==",
+  "dgSpecHash": "QmQhMrbcHxFnc85EFEL0DOKtp1nL1kp+f8v8SWBkZ9OgrN1yHKeqOZaT5rU47dN9jEkDFvzVsaqhGdZ2PeXvPQ==",
   "success": true,
-  "projectFilePath": "D:\\Bala\\Angular\\StudentManage\\StudentManage\\studentApi\\StudentApi.csproj",
+  "projectFilePath": "D:\\GOS\\StudentManage\\StudentApi\\StudentApi.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
