@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface Transaction {
   item: string;
-  cost: number;
+  cost: number; //comment
 }
 
 @Component({
